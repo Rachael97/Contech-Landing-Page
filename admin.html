@@ -97,6 +97,30 @@
 		width: 15%;
 	 }
 	 
+	 .badge-link {
+		cursor: pointer;
+	 }	
+	 
+	 .modal {
+		text-align: left;	
+		color: #000;
+	 }
+	 
+	 .logo {
+		text-align: center;
+		margin-bottom: 30px;
+	 }
+	 
+	 .form-section {
+		background-color: rgba(202, 202, 202, 0.35);
+		padding: 1px 0 1px;
+		margin: 15px 0 15px;	
+	 }
+	 
+	 .form-section h5 {
+		padding-left: 20px;
+	 }
+	 
 	</style>
 	
 </head>
@@ -336,7 +360,7 @@
 										<li>随时更新最新版本</li>
 										<li>保障公司机密</li>
 										<li><a href="#qa">**不可退款</li>
-										<li><a href="" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+										<li><a data-toggle="modal" data-target="#myModal" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -348,7 +372,7 @@
 										<li>随时更新最新版本</li>
 										<li>保障公司机密</li>
 										<li>一个月内可退款</li>
-										<li><a href="" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+										<li><a data-toggle="modal" data-target="#myModal" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -360,7 +384,7 @@
 										<li>随时更新最新版本</li>
 										<li>保障公司机密</li>
 										<li>一个月内可退款</li>
-										<li><a href="" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+										<li><a data-toggle="modal" data-target="#myModal" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -415,12 +439,148 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h2 class="section-heading">Discover how ConTech can improve your business!</h2>
                     <p>Our app is available on any mobile device! Download now to get started!</p>
-                    <div class="badges">
-                        <a class="badge-link" href="#"><img src="img/get.jpg" alt="download"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+         	
+					<!--Trigger modal -->
+						<div class="badges">
+							<a class="badge-link" data-toggle="modal" data-target="#myModal">
+							<img src="img/get.jpg" alt="download">
+							</a>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+							<div class="modal-content">
+							  <div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 id="myModalLabel">注册账号</h4>
+							  </div>
+							  
+							  <div class="modal-body">
+										
+										<form id="form">
+											
+											<div class="logo">
+												<a href="#"><img src="img/logo.jpg"alt="logo"></a>
+												<label for="logo" style="display:block;">上传公司标志</label>
+											</div>
+											
+											<div class="form-section">
+												<h5><b>公司资料</b></h5>
+											</div>
+												<div class="form-group">
+													<label for="companyName">公司名称*</label>
+													<input id="companyName" type="companyName" class="form-control" placeholder="例：ABC有限公司">
+												</div>
+												<div class="form-group">
+													<label for="companyCode">公司代号（3 个字母）*</label>
+													<input id="companyCode" type="companyCode" class="form-control" placeholder="例：CHL">
+												</div>
+												<div class="form-group">
+													<label for="companyEmail">公司邮箱*</label>
+													<input id="companyEmail" type="companyEmail" class="form-control" placeholder="例：yourname@domain.com">
+												</div>
+												<div class="form-group">
+													<label for="companyTel">公司联络号码*</label>
+													<input id="companyTel" type="companyTel" class="form-control" placeholder="例：071234567">
+												</div>
+												<div class="form-group">
+													<label for="package">购买配套*</label>
+													<select id="package" type="package" class="form-control">
+														<option value="A">三个月</option>
+														<option value="B">六个月</option>
+														<option value="C">一年</option>
+													</select>
+												</div>
+											
+											<div class="form-section">
+												<h5><b>公司地址*</b></h5>
+											</div>
+												<div class="form-group">
+													<label for="country">国家*</label>
+													<select id="country" type="country" class="form-control">
+														<option value="MY">马来西亚</option>
+														<option value="SG">新加坡</option>
+														<option value="UK">英国</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="companySsm">公司注册编号（SSM）</label>
+													<input id="companySsm" type="companySsm" class="form-control" placeholder="例：JM00000001">
+												</div>
+												<div class="form-group">
+													<label for="companyGst">消费税编号（GST）</label>
+													<input id="companyGst" type="companyGst" class="form-control" placeholder="例：xxxxxxx">
+												</div>
+												<div class="form-group">
+													<label for="area">地区*</label>
+													<input id="area" type="area" class="form-control" placeholder="例：柔佛">
+												</div>
+												<div class="form-group">
+													<label for="coverArea">覆盖地区</label>
+													<input id="coverArea" type="coverArea" class="form-control" placeholder="例：居銮-峇株巴辖">
+												</div>
+												<div class="form-group">
+													<label for="targetCustomer">目标顾客群</label>
+													<input id="targetCustomer" type="targetCustomer" class="form-control" placeholder="例：华人市场">
+												</div>
+												<div class="form-group">
+													<label for="targetPeriod">目标期限</label>
+													<input id="targetPeriod" type="targetPeriod" class="form-control" placeholder="例：6个月">
+												</div>
+											
+											<div class="form-section">
+												<h5><b>负责人联络方式</b></h5>
+											</div>
+												<div class="form-group">
+													<label for="customerName">名字（中文）</label>
+													<input id="customerName" type="customerName" class="form-control" placeholder="例：陈阿明">
+												</div>
+												<div class="form-group">
+													<label for="firstName">名字（英文）*</label>
+													<input id="firstName" type="firstName" class="form-control" placeholder="例：Ah Ming">
+												</div>
+												<div class="form-group">
+													<label for="lastName">姓氏（英文）*</label>
+													<input id="lastName" type="lastName" class="form-control" placeholder="例：Tan">
+												</div>
+												<div class="form-group">
+													<label for="loginId">登入账号*</label>
+													<input id="loginId" type="loginId" class="form-control" placeholder="例：myusername">
+												</div>
+												<div class="form-group">
+													<label for="customerEmail">邮箱*</label>
+													<input id="customerEmail" type="customerEmail" class="form-control" placeholder="例：yourname@domain.com">
+												</div>
+												<div class="form-group">
+													<label for="customerTel">联络号码*</label>
+													<input id="customerTel" type="customerTel" class="form-control" placeholder="例：0167000123">
+												</div>
+												<div class="form-group">
+													<label for="password">登入密码*</label>
+													<input id="password" type="password" class="form-control" placeholder="例：日后登入的密码">
+												</div>
+												
+											<div class="form-section">
+												<h5><b>补充文件</b></h5>
+											</div>
+												<p style="padding-left:50px;"><b>SSM, 名片, 等等</b></p>
+												<input id="supplementaryDocument" type="file" name="supplementaryDocument">
+										
+										</form>
+									
+							  </div>
+							  
+							  <div class="modal-footer">
+									<button type="button" class="btn btn-danger" style="outline:0;">完成注册</button>
+							  </div>
+							  
+							</div>
+						  </div>
+						</div>
+				</div>
+			</div>
+		</div>
     </section>
 
     <footer>
