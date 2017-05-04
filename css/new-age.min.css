@@ -19,7 +19,13 @@ body {
 	font-family:Muli,Helvetica,Arial,sans-serif;
 	webkit-tap-highlight-color:#222
 }
-.navbar-default,.navbar-default .navbar-header .navbar-brand,h1,h2,h3,h4,h5,h6 {
+.navbar-default,.navbar-default .navbar-header .navbar-brand {
+	font-family:Catamaran,Helvetica,Arial,sans-serif;
+	font-weight:500;
+	letter-spacing:1px;
+	font-size:30px;
+}
+h1,h2,h3,h4,h5,h6{
 	font-family:Catamaran,Helvetica,Arial,sans-serif;
 	font-weight:200;
 	letter-spacing:1px
@@ -68,10 +74,11 @@ p {
 .navbar-default .navbar-header .navbar-toggle {
 	font-size:12px;
 	color:#222;
-	padding:8px 10px
+	padding:8px 10px;
+	background-color: #fff;
 }
 .navbar-default .nav>li>a {
-	font-size:11px
+	font-size:13px
 }
 .navbar-default .nav>li>a,.navbar-default .nav>li>a:focus {
 	color:#222
@@ -312,6 +319,9 @@ footer,footer ul li a {
 section.why{
 	background-color:#F78574
 }
+section.fee{
+	background-color:#f7f99f
+}
 footer {
 	background-color:#222;
 	padding:25px 0
@@ -344,7 +354,9 @@ footer ul li a.active,footer ul li a:active,footer ul li a:focus,footer ul li a:
 	border-color:#fdcc52
 }
 .btn {
-	border-radius:300px
+	border-radius:300px;
+	border: 1px solid;
+	margin: 25px;
 }
 .btn-xl {
 	padding:15px 45px;
