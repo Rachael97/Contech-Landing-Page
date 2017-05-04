@@ -46,11 +46,51 @@
 	 
 	 .role{
 	  text-align: center; 
+	  margin-bottom: 20px;
 	 }
 	 
 	 .contact-icon{
 		font-size: 50px;
 		list-style: none;
+	 }
+	 
+	 .btn-danger{
+		margin-left: 25px;
+	 }
+	 
+	 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+		background-color: #ddd;
+	 }
+	 
+	 .plan .header h3 {
+		margin-bottom: 0;
+		font-size: 36px;
+		line-height: 36px;
+		font-weight: 300;
+		padding: 15px 0 10px;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		background-color: #fafafa;
+	 }
+	 
+	 .plan .header .attention{
+		font-size: 40px;
+		color: rgb(243, 26, 2);
+		font-style: italic;
+	 }
+	 
+	 .plan ul {
+		list-style: none;
+	 }
+	 
+	 .bordered {
+		border: 2px solid #f3f3f3;
+		border-radius: 3px;
+		background-color: #fff;
+	 }
+	 
+	 .bordered li {
+		padding: 8px;
+		margin-left: -30px;
 	 }
 	
 	 th{
@@ -70,12 +110,12 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="about.html">Consignment Technology - ConTech</a>
+                <a class="navbar-brand page-scroll" href="about.html">ConTech</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="#about">关于我们</a>
                     </li>
@@ -83,7 +123,10 @@
                         <a class="page-scroll" href="#why">经理软件</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#q&a">问 &amp 答</a>
+                        <a class="page-scroll" href="#qa">问 &amp 答</a>
+					<li>
+                        <a class="page-scroll" href="#fee">配套价格</a>
+                    </li>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">联系我们</a>
@@ -94,6 +137,7 @@
 					<li>
 						<a href="#">语言 <b class="caret"></b></a>
 					</li>
+				</ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -223,85 +267,129 @@
 		</div>
     </section>
 	
-	<section id="q&a">
+		<section id="qa" class="#">
 		<div class="container">
             <div class="row">
 				<div class=" col-lg-12 text-center">
 					<div class="section-heading">
 						<h2>Q &amp A</h2>
 						<hr>
-					</div>
-                </div>
-            </div>
-			
-			<div class=" col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">1.寄销模式是什么意思？</div>
-					<div class="panel-body">
-						寄销模式是一个能解决租金和囤货问题的商业手法。顾名思义，就是通过和店主达成协议，把产品寄放到顾客流量大的店面，或者是一些对产品有需求的地方，增加产品销售的速度。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">2.我公司的每个销售人员都必须付款去下载这个应用程序，才能使用吗？</div>
-					<div class="panel-body">
-						我们的销售是针对公司为单位，并不是使用量。简单来说，如果您的公司已经<a href="#download">下载</a>Contech应用，我们将会发送给您的公司两个二维码，分别是让您用于下载经理和行销人员的应用程序。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">3.对于新的使用者，会有任何的网上教学或课程吗？</div>
-					<div class="panel-body">
-						在你<a href="#download">下载</a>了Contech之后，我们将会收到您的资料，并会电邮或致电联系您。我们的销售人员会上门提供简单教学，也附送教学光碟。如果使用后有任何疑问或系统出现问题，可以联络销售人员，或电邮到<a href="#">contech@gmail.com</a>。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">4.下载了就能直接使用吗？</div>
-					<div class="panel-body">
-						这个程序是免费<a href="#download">下载</a>的，可是必须由我们的销售人员为您设定账号后才能开始使用。在设定账号前必须缴清费用。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">5.购买了Contech就能永久使用吗？</div>
-					<div class="panel-body">
-						Contech使用付费如下： 
-						<ul>
-							<li>三个月 RM900.00</li> 
-							<li>六个月 RM1,200.00</li>  
-							<li>十二个月 RM1,800.00</li>  
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class=" col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">6.行政系统不需要下载吗？</div>
-					<div class="panel-body">
-						行政系统是通过网站来处理，我们会帮您的公司注册用户账号，登入后您可以更换密码。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">7.购买后觉得不适合，可以退款吗？或者有试用期吗？</div>
-					<div class="panel-body">
-						购买后30天内可被视为试用期，如果有意取消使用，可以联系我们，所付费用将全额退还。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">8.这个应用程序只能在马来西亚使用吗？</div>
-					<div class="panel-body">
-						Contech也能在别的国家使用，只要是基于行销手法的商业，都能帮助您解决管理问题。
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">9.我购买的版本是最新版本吗？需要一直更新吗？</div>
-					<div class="panel-body">
-						如若有任何更新我们会用电邮发出公告，随时让您使用最新版本。
-					</div>
-				</div>
+							<div class=" col-lg-6">
+								<div class="panel panel-default">
+									<div class="panel-heading">1.什么是寄销模式？</div>
+									<div class="panel-body">
+										寄销模式是一个能解决租金和囤货问题的商业手法。顾名思义，就是通过和店主达成协议，把产品寄放到顾客流量大的店面，或者是一些对产品有需求的地方，增加产品销售的速度。
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">2.这个软件如何计费？是以使用量来计费吗？</div>
+									<div class="panel-body">
+										我们的销售是针对公司为单位，并不是使用量。简单来说，如果您的公司已经<a href="#download">下载</a>Contech应用，我们将会发送给您的公司两个二维码，分别是让您用于下载经理和行销人员的应用程序。
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">3.对于新的使用者，会有任何的网上教学或课程吗？</div>
+									<div class="panel-body">
+										在你<a href="#download">下载</a>了Contech之后，并且完成注册后，我们将会收到您的资料，审核与确认后会电邮或致电联系您。我们的销售人员会上门提供简单教学，并附送教学软件。如果使用后有任何疑问或系统出现问题，可以联络销售人员，或电邮到<a href="#">contech@gmail.com</a>。
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">4.下载了就能直接使用吗？</div>
+									<div class="panel-body">
+										这个程序是免费<a href="#download">下载</a>的，可是必须由我们的销售人员为您设定账号后才能开始使用。在设定账号前必须缴清费用。
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">5.购买了Contech就能永久使用吗？</div>
+									<div class="panel-body">
+										您的使用期限视您的购买配套而定。
+									</div>
+								</div>
+							</div>
+							
+							<div class=" col-lg-6">
+								<div class="panel panel-default">
+									<div class="panel-heading">6.行政系统不需要下载吗？</div>
+									<div class="panel-body">
+										行政系统是通过网站来处理，我们会帮您的公司注册用户账号，登入后您可以更换密码。
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">7.购买后觉得不适合，可以退款吗？或者有试用期吗？</div>
+									<div class="panel-body">
+										购买后30天内可被视为试用期，如果有意取消使用，可以联系我们，所付费用将全额退还。<br>
+										**注：3个月配套除外 <a href="#fee">了解配套</a>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">8.这个应用程序只能在马来西亚使用吗？</div>
+									<div class="panel-body">
+										Contech也能在别的国家使用，只要是基于行销手法的商业，都能帮助您解决管理问题。
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">9.我购买的版本是最新版本吗？需要一直更新吗？</div>
+									<div class="panel-body">
+										如若有任何更新我们会用电邮发出公告，随时让您使用最新版本。
+									</div>
+								</div>
+							</div>	
+					</div>	
+				</div>	
 			</div>	
         </div>
 	</section>
 	
-
+	<section id="fee" class="fee">
+        <div class="container">
+            <div class="row">
+				<div class=" col-lg-12 text-center">
+					<div class="section-heading">
+						<h2>Package Price</h2>
+						<hr>
+							<div class="col-md-4 plan">
+								<div class="header">
+								<h3>3个月</h3>
+									<ul class="bordered">
+										<li>无限使用者</li>
+										<li>随时更新最新版本</li>
+										<li>保障公司机密</li>
+										<li><a href="#qa">**不可退款</li>
+										<li><a href="" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4 plan">
+								<div class="header">
+								<h3 class="attention">一年超值配套</h3>
+									<ul class="bordered">
+										<li>无限使用者</li>
+										<li>随时更新最新版本</li>
+										<li>保障公司机密</li>
+										<li>一个月内可退款</li>
+										<li><a href="" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4 plan">	
+								<div class="header">
+								<h3>6个月</h3>
+									<ul class="bordered">
+										<li>无限使用者</li>
+										<li>随时更新最新版本</li>
+										<li>保障公司机密</li>
+										<li>一个月内可退款</li>
+										<li><a href="" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
     <section id="contact" class="contact">
         <div class="container">
 			<div class="row">
