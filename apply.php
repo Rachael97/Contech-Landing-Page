@@ -1,61 +1,44 @@
 <?php
 	
+	include "db.php";
+	
 	$companyName = $_POST['companyName'];
-	echo $companyName;
-	
+	//echo $companyName;
 	$companyCode = $_POST['companyCode'];
-	echo $companyCode;
-	
 	$companyEmail = $_POST['companyEmail'];
-	echo $companyEmail;
-
 	$companyTel = $_POST['companyTel'];
-	echo $companyTel;
-	
 	$package = $_POST['package'];
-	echo $package;
-	
 	$country = $_POST['country'];
-	echo $country;
-	
 	$companySsm = $_POST['companySsm'];
-	echo $companySsm;
-	
 	$companyGst = $_POST['companyGst'];
-	echo $companyGst;
-	
 	$coverArea = $_POST['coverArea'];
-	echo $coverArea;
-	
 	$targetCustomer = $_POST['targetCustomer'];
-	echo $targetCustomer;
-	
 	$targetPeriod = $_POST['targetPeriod'];
-	echo $targetPeriod;
-	
 	$customerName = $_POST['customerName'];
-	echo $customerName;
-	
 	$firstName = $_POST['firstName'];
-	echo $firstName;
-	
 	$lastName = $_POST['lastName'];
-	echo $lastName;
-	
 	$loginId = $_POST['loginId'];
-	echo $loginId;
-	
 	$customerEmail = $_POST['customerEmail'];
-	echo $customerEmail;
-	
 	$customerTel = $_POST['customerTel'];
-	echo $customerTel;
-	
 	$password = $_POST['password'];
-	echo $password;
 	
-	$supplementaryDocument = $_POST['supplementaryDocument'];
-	echo $supplementaryDocument;
+	$created_date = date('Y-m-d H:i:s');
 	
+	mysqli_query($link,
+	"INSERT INTO apply_list(companyName,companyCode,companyEmail,companyTel,package,country,companySsm,companyGst,coverArea,targetCustomer,targetPeriod,customerName,firstName,lastName,loginId,customerEmail,customerTel,password,created_date) VALUES ('$companyName','$companyCode','$companyEmail','$companyTel','$package','$country','$companySsm','$companyGst','$coverArea','$targetCustomer','$targetPeriod','$customerName','$firstName','$lastName','$loginId','$customerEmail','$customerTel','$password','$created_date')")or die(mysqli_error());
 	
 ?>
+
+<html>
+	<head></head>
+	<body onload="thank()" >
+		<script>
+		function thank(){
+			alert("Thank you !");
+		location.href="about.html"; }
+		</script>
+	</body>
+</html>
+
+
+

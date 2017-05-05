@@ -594,7 +594,7 @@
 												</div>
 												<div class="form-group">
 													<label for="password">登入密码*</label>
-													<input id="password" name="password" class="form-control" placeholder="例：日后登入的密码">
+													<input type="password" id="password" name="password" class="form-control" placeholder="例：日后登入的密码">
 												</div>
 												
 											<div class="form-section">
@@ -606,7 +606,7 @@
 							  </div>
 							  
 							  <div class="modal-footer">
-									<button type="submit" class="btn btn-danger" style="outline:0;">完成注册</button>
+									<button type="submit" class="btn btn-danger" style="outline:0;" onclick="submitForm()">完成注册</button>
 							  </div>
 							  
 							</form> 
@@ -653,6 +653,21 @@
 		 $("#myModal").modal('show');
 		 $("#package").val(month);
 		}
+		
+		function submitForm() {
+			$('#myModal').click(function() {
+				var res = confirm('Do you really want to submit the form?');
+				if(!res){ 
+					return false; 
+				}else{ 
+				
+			//submits form 
+				}
+				
+			});
+		}
+		
+		
 	</script>
 
 </body>
