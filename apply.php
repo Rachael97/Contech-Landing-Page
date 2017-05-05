@@ -24,8 +24,23 @@
 	
 	$created_date = date('Y-m-d H:i:s');
 	
+	/* mysqli_query(
+		
+		$link,"INSERT INTO table_name(name) VALUES ('$name')"
+	
+	) or die (mysqli_error()); -->显示错误原因
+	
+	 echo success;
+	
+	*/
+	
+	
+	
 	mysqli_query($link,
 	"INSERT INTO apply_list(companyName,companyCode,companyEmail,companyTel,package,country,companySsm,companyGst,coverArea,targetCustomer,targetPeriod,customerName,firstName,lastName,loginId,customerEmail,customerTel,password,created_date) VALUES ('$companyName','$companyCode','$companyEmail','$companyTel','$package','$country','$companySsm','$companyGst','$coverArea','$targetCustomer','$targetPeriod','$customerName','$firstName','$lastName','$loginId','$customerEmail','$customerTel','$password','$created_date')")or die(mysqli_error());
+	
+	
+	//header ("location:about.html");
 	
 ?>
 
