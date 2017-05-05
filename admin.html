@@ -70,6 +70,7 @@
 		padding: 15px 0 10px;
 		border: 1px solid rgba(0, 0, 0, 0.15);
 		background-color: #fafafa;
+		font-family: "Comic Sans MS", cursive, sans-serif;
 	 }
 	 
 	 .plan .header .attention{
@@ -366,7 +367,7 @@
 										<li>随时更新最新版本</li>
 										<li>保障公司机密</li>
 										<li><a href="#qa">**不可退款</li>
-										<li><a data-toggle="modal" data-target="#myModal" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+										<li><a href="javascript:applyformOpen('3')" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -378,7 +379,7 @@
 										<li>随时更新最新版本</li>
 										<li>保障公司机密</li>
 										<li>一个月内可退款</li>
-										<li><a data-toggle="modal" data-target="#myModal" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+										<li><a href="javascript:applyformOpen('12')" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -390,7 +391,7 @@
 										<li>随时更新最新版本</li>
 										<li>保障公司机密</li>
 										<li>一个月内可退款</li>
-										<li><a data-toggle="modal" data-target="#myModal" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
+										<li><a href="javascript:applyformOpen('6')" class="btn btn-lg">Subscribe <i class="fa fa-user"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -457,45 +458,46 @@
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						  <div class="modal-dialog" role="document">
 							<div class="modal-content">
-							  <div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h4 id="myModalLabel">注册账号</h4>
-							  </div>
 							  
-							  <div class="modal-body">
-										
-										<form id="form">
-											
+							  <form id="form" method="post" action="apply.php">
+							  
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 id="myModalLabel">注册账号</h4>
+								  </div>
+							  
+								  <div class="modal-body">
+
 											<div class="logo">
-												<a href="#"><img src="img/logo.jpg"alt="logo"></a>
-												<label for="logo" style="display:block;">上传公司标志</label>
-											</div>
+										<a href="#"><img src="img/logo.jpg"alt="logo"></a>
+										<label for="logo" style="display:block;">上传公司标志</label>
+									</div>
 											
 											<div class="form-section">
 												<h5><b>公司资料</b></h5>
 											</div>
 												<div class="form-group">
 													<label for="companyName">公司名称*</label>
-													<input id="companyName" type="companyName" class="form-control" placeholder="例：ABC有限公司">
+													<input id="companyName" name="companyName" class="form-control" placeholder="例：ABC有限公司">
 												</div>
 												<div class="form-group">
 													<label for="companyCode">公司代号（3 个字母）*</label>
-													<input id="companyCode" type="companyCode" class="form-control" placeholder="例：CHL">
+													<input id="companyCode" name="companyCode" class="form-control" placeholder="例：CHL">
 												</div>
 												<div class="form-group">
 													<label for="companyEmail">公司邮箱*</label>
-													<input id="companyEmail" type="companyEmail" class="form-control" placeholder="例：yourname@domain.com">
+													<input id="companyEmail" name="companyEmail" class="form-control" placeholder="例：yourname@domain.com">
 												</div>
 												<div class="form-group">
 													<label for="companyTel">公司联络号码*</label>
-													<input id="companyTel" type="companyTel" class="form-control" placeholder="例：071234567">
+													<input id="companyTel" name="companyTel" class="form-control" placeholder="例：071234567">
 												</div>
 												<div class="form-group">
 													<label for="package">购买配套*</label>
-													<select id="package" type="package" class="form-control">
-														<option value="A">三个月</option>
-														<option value="B">六个月</option>
-														<option value="C">一年</option>
+													<select id="package" name="package" class="form-control">
+														<option value="3">三个月</option>
+														<option value="6">六个月</option>
+														<option value="12">一年</option>
 													</select>
 												</div>
 											
@@ -504,7 +506,7 @@
 											</div>
 												<div class="form-group">
 													<label for="country">国家*</label>
-													<select id="country" type="country" class="form-control">
+													<select id="country" name="country" class="form-control">
 														<option value="MY">马来西亚</option>
 														<option value="SG">新加坡</option>
 														<option value="UK">英国</option>
@@ -512,27 +514,27 @@
 												</div>
 												<div class="form-group">
 													<label for="companySsm">公司注册编号（SSM）</label>
-													<input id="companySsm" type="companySsm" class="form-control" placeholder="例：JM00000001">
+													<input id="companySsm" name="companySsm" class="form-control" placeholder="例：JM00000001">
 												</div>
 												<div class="form-group">
 													<label for="companyGst">消费税编号（GST）</label>
-													<input id="companyGst" type="companyGst" class="form-control" placeholder="例：xxxxxxx">
+													<input id="companyGst" name="companyGst" class="form-control" placeholder="例：xxxxxxx">
 												</div>
 												<div class="form-group">
 													<label for="area">地区*</label>
-													<input id="area" type="area" class="form-control" placeholder="例：柔佛">
+													<input id="area" name="area" class="form-control" placeholder="例：柔佛">
 												</div>
 												<div class="form-group">
 													<label for="coverArea">覆盖地区</label>
-													<input id="coverArea" type="coverArea" class="form-control" placeholder="例：居銮-峇株巴辖">
+													<input id="coverArea" name="coverArea" class="form-control" placeholder="例：居銮-峇株巴辖">
 												</div>
 												<div class="form-group">
 													<label for="targetCustomer">目标顾客群</label>
-													<input id="targetCustomer" type="targetCustomer" class="form-control" placeholder="例：华人市场">
+													<input id="targetCustomer" name="targetCustomer" class="form-control" placeholder="例：华人市场">
 												</div>
 												<div class="form-group">
 													<label for="targetPeriod">目标期限</label>
-													<input id="targetPeriod" type="targetPeriod" class="form-control" placeholder="例：6个月">
+													<input id="targetPeriod" name="targetPeriod" class="form-control" placeholder="例：6个月">
 												</div>
 											
 											<div class="form-section">
@@ -540,31 +542,31 @@
 											</div>
 												<div class="form-group">
 													<label for="customerName">名字（中文）</label>
-													<input id="customerName" type="customerName" class="form-control" placeholder="例：陈阿明">
+													<input id="customerName" name="customerName" class="form-control" placeholder="例：陈阿明">
 												</div>
 												<div class="form-group">
 													<label for="firstName">名字（英文）*</label>
-													<input id="firstName" type="firstName" class="form-control" placeholder="例：Ah Ming">
+													<input id="firstName" name="firstName" class="form-control" placeholder="例：Ah Ming">
 												</div>
 												<div class="form-group">
 													<label for="lastName">姓氏（英文）*</label>
-													<input id="lastName" type="lastName" class="form-control" placeholder="例：Tan">
+													<input id="lastName" name="lastName" class="form-control" placeholder="例：Tan">
 												</div>
 												<div class="form-group">
 													<label for="loginId">登入账号*</label>
-													<input id="loginId" type="loginId" class="form-control" placeholder="例：myusername">
+													<input id="loginId" name="loginId" class="form-control" placeholder="例：myusername">
 												</div>
 												<div class="form-group">
 													<label for="customerEmail">邮箱*</label>
-													<input id="customerEmail" type="customerEmail" class="form-control" placeholder="例：yourname@domain.com">
+													<input id="customerEmail" name="customerEmail" class="form-control" placeholder="例：yourname@domain.com">
 												</div>
 												<div class="form-group">
 													<label for="customerTel">联络号码*</label>
-													<input id="customerTel" type="customerTel" class="form-control" placeholder="例：0167000123">
+													<input id="customerTel" name="customerTel" class="form-control" placeholder="例：0167000123">
 												</div>
 												<div class="form-group">
 													<label for="password">登入密码*</label>
-													<input id="password" type="password" class="form-control" placeholder="例：日后登入的密码">
+													<input id="password" name="password" class="form-control" placeholder="例：日后登入的密码">
 												</div>
 												
 											<div class="form-section">
@@ -572,20 +574,18 @@
 											</div>
 												<p style="padding-left:50px;"><b>SSM, 名片, 等等</b></p>
 												<input id="supplementaryDocument" type="file" name="supplementaryDocument">
-										
-										</form>
-									
-							  </div>
+								  </div>
+								  
+								  <div class="modal-footer">
+									<button type="submit" class="btn btn-danger" style="outline:0;">完成注册</button>
+								  </div>
 							  
-							  <div class="modal-footer">
-									<button type="button" class="btn btn-danger" style="outline:0;">完成注册</button>
-							  </div>
-							  
+							  </form>
 							</div>
 						  </div>
 						</div>
 				</div>
-			</div>
+			</div>	
 		</div>
     </section>
 
@@ -617,6 +617,14 @@
 
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
+	
+	<script>
+		function applyformOpen(month) {
+			$("#myModal").modal('show');
+			$("#package").val(month);
+		}
+		
+	</script>
 
 </body>
 
