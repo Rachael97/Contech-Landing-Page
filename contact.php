@@ -21,7 +21,7 @@
 		<script>
 			function messageReceived() {
 				alert('谢谢您的提交，我们会尽快回复您的疑问！');
-				location.href="about.html";
+				location.href="index.html";
 				
 			}
 		</script>

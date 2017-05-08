@@ -18,6 +18,7 @@
 	$firstName = $_POST['firstName'];
 	$lastName = $_POST['lastName'];
 	$loginId = $_POST['loginId'];
+	$supplementaryDocument = $_POST['supplementaryDocument'];
 	$customerEmail = $_POST['customerEmail'];
 	$customerTel = $_POST['customerTel'];
 	$password = $_POST['password'];
@@ -37,10 +38,12 @@
 	
 	
 	mysqli_query($link,
-	"INSERT INTO apply_list(companyName,companyCode,companyEmail,companyTel,package,country,companySsm,companyGst,coverArea,targetCustomer,targetPeriod,customerName,firstName,lastName,loginId,customerEmail,customerTel,password,created_date) VALUES ('$companyName','$companyCode','$companyEmail','$companyTel','$package','$country','$companySsm','$companyGst','$coverArea','$targetCustomer','$targetPeriod','$customerName','$firstName','$lastName','$loginId','$customerEmail','$customerTel','$password','$created_date')")or die(mysqli_error());
+	"INSERT INTO apply_list(companyName,companyCode,companyEmail,companyTel,package,country,companySsm,companyGst,coverArea,targetCustomer,targetPeriod,customerName,firstName,lastName,loginId,supplementaryDocument,customerEmail,customerTel,password,created_date) VALUES ('$companyName','$companyCode','$companyEmail','$companyTel','$package','$country','$companySsm','$companyGst','$coverArea','$targetCustomer','$targetPeriod','$customerName','$firstName','$lastName','$loginId','$supplementaryDocument','$customerEmail','$customerTel','$password','$created_date')")or die(mysqli_error());
 	
 	
 	//header ("location:about.html");
+	
+	
 	
 ?>
 
@@ -50,7 +53,9 @@
 		<script>
 		function thank(){
 			alert("Thank you !");
-		location.href="about.html"; }
+		location.href="index.html"; 
+		}
+		
 		</script>
 	</body>
 </html>
